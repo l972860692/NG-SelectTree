@@ -1,2 +1,2 @@
 
-var appInternal=angular.module('appPage',[]);
+var appInternal = angular.module('appPage', ['mySelectTree']);
