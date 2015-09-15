@@ -1,7 +1,7 @@
 
 appInternal.controller('indexCtr', ['$scope', '$http', 'initTreeData', function ($scope, $http, initTreeData) {
     //the $http api have change
-    $scope.url = 'data.json';
+    $scope.url = 'data.html';
     $http.get($scope.url).then(function (response) {
         $scope.departmentData = initTreeData(response.data);
         $scope.mySelect = $scope.departmentData[1];

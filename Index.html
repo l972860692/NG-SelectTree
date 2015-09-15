@@ -10,11 +10,9 @@
 
     </head>
     <body ng-app="appPage">
-                    <!--hahaha today when see the api doc about ngOptions  i find ng add the function disable before init about select.
-                                            happly!!!  Before that i need to write the ngRepeat to loop to show the option beacuse of disabled some option and adding default selected option
-                                            but you konw i meet issue  that it  show nothing init . i  forget  how to slove it.
-                                            More import i can use ngOptions more custom 
-                                            -->
+        <!--可能server需要设置json支持 所有我把json文件改成html把请求的url也改成html后缀-->
+                    <!--重写以前写的菜单，最近看ng文档4.4的发现ng-options已经新增了disable 以前没有 我需要设置某些项不能选 不得不用options 和ng-repeat但是发现第一次加载会出现不显示
+                        然后我也忘记怎么解决的，不过这个更新使用更方便了                    -->
         <div ng-controller="indexCtr">
 
             <select ng-model="mySelect" ng-options="n.Name disable when n.ParentId ==0  for  n in departmentData" ng-change="hadSelect()">
